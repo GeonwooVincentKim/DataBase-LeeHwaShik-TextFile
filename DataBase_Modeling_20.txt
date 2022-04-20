@@ -105,11 +105,62 @@
   = 2. CASCADE UPDATE -> 부모에 의해 창씨개명
 
 5. 데이터 모델링 과정
-- 1. 개념 데이터 모델링
-- 2. 데이터베이스 설계
-  = 1. 논리 설계
-  = 2. 물리 설계
+- 1. 전략 수립 & 분석
+  = 개념 데이터 모델링
+     -> 1. Entity 정의
+     -> 2. Entity - Relationship Data Model (E-R Data Model)
 
-- 3. 데이터베이스 생성
+- 2. 설계
+  = 데이터베이스 설계
+     -> 1. 논리 설계 (기초 설계)
+     -> 2. 상세 설계
+         => 1. Table 정의
+         => 2. Index, View, Cluster, 저장 공간 지원
 
+- 3. 개발
+  = 데이터베이스 생성
+
+6. 기초 설계
+- 1. 1단계
+  = 단위 ENTITY 를 Table 로
+
+- 2. 2단계
+  = 1. Attribute 를 Column 으로
+  = 2. Sample Data 작성
+
+- 3. 3단계
+  = UID 를 기본 키 (Primary Key)
+
+- 4. 4단계
+  = RELATIONSHIP 을 외부 키 (Foreign Key) 로
+
+- 5. 5단계
+  = 아크 (Arc) 옵션 처리
+     -> Exclusive 관계가 없을 경우 (복잡한 Arc 관계)
+
+- 6. 6단계
+  = SubType 옵션 처리
+     -> SubType 이 없는 경우
+
+- 7. 5단계와 6단계를 거쳐, Exclusive 관계가 있거나 SubType 관계가 있는 것
+  = 인간의 판단을 약간 넣기 
+     -> 1. Table 하나로 처리할 것인가
+     -> 2. Table 여러 개로 처리할 것인가
+
+7. 단위 ENTITY 를 TABLE 로
+- 1. Table 이름을 짓고, 그 Table 이 하는 내용이 무슨 내용인가에 대해 (어떤 일을 처리하는지에 대해) 작성
+  = Table 이 무슨 내용 (이름) 인지 알 수 있도록 변별력을 주는 것이 좋음
+
+- 2. 일반적으로 TABLE 명칭과 ENTITY 명칭은 길게 하는 것이 좋음
+- 3. 필요에 따라 ENTITY 명칭은 한글도 하고 동의어를 영문으로 표시
+  = 가능한 TABLE 명칭과 같게
+
+- 4. 사례표 (Instance Chart) 에 Table 의 역할을 간략하게 표현
+- 5. SuperType 이나 SubType 은 나중에 결정
+
+8. 속성을 Column 으로
+- 1. ENTITY 에 있는 속성들을 사례표에 Column 명에 기록
+- 2. Column 의 명칭과 속성의 명칭은 반드시 일치할 필요는 없지만, 가장 좋은 방법은 나중에 서로의 Communication 을 위해 표준된 약어를 만드는 것이 좋음
+  = 1. Example -> 10만 단을 가지고 100만권의 책을 만들 수 있음
+  = 2. Programmer 와 사용자의 혼동을 피하기 위해 가능한 표준화 된 약어 사용
 
