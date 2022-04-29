@@ -72,6 +72,7 @@
   = 3. OR, IN, BETWEEN 처리 발생
   = 4. SELECT * FROM 연예인 WHERE SUM_TYPE IN ('2', '3');
 
+
 4. SubType 선정기준
 - 1. SubType 은 한 가지 이상 존재할 수 없음
   = 1. Example
